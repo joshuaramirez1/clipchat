@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipChat Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1B5E20;
+            --secondary-color: #4CAF50;
+            --background-color: #F0F4F1;
+            --card-color: #FFFFFF;
+            --text-color: #333333;
+            --subtext-color: #666666;
+            --link-color: #1B5E20;
+            --link-hover-color: #43A047;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 400px;
+            min-width: 300px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--card-color);
+            color: var(--text-color);
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--link-hover-color);
+        }
+
+        #status {
+            margin-top: 20px;
+            color: var(--link-color);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        a {
+            color: var(--link-color);
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('logo.png');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+    <h2>ClipChat Settings</h2>
+    <input type="text" id="apiKey" placeholder="Enter your API key">
+    <button id="saveButton">Save API Key</button>
+    <p id="status"></p>
+    <a href="guide.html" target="_blank">Don't know where to get this? Click here</a>
+
+    <script src="options.js"></script>
+</body>
+</html>

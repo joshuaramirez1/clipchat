@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipChat Installation Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1B5E20;
+      --secondary-color: #4CAF50;
+      --background-color: #F0F4F1;
+      --card-color: #FFFFFF;
+      --text-color: #333333;
+      --subtext-color: #666666;
+      --link-color: #1B5E20;
+      --link-hover-color: #43A047;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('logo.png');
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .subtext {
+      font-size: 22px;
+      color: var(--subtext-color);
+      margin-bottom: 10px;
+    }
+
+    .time {
+      font-size: 20px;
+      color: var(--subtext-color);
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .card {
+      background-color: var(--card-color);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    .step {
+      margin-bottom: 40px;
+    }
+
+    .step h3 {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover-color);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      background-color: var(--link-hover-color);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>ClipChat Installation Guide</h1>
+    <div class="logo"></div>
+  </div>
+
+  <p class="subtext">Follow these steps to set up ClipChat and start using it with your YouTube videos.</p>
+  <p class="time">⏱️ Estimated time: &lt; 5 minutes</p>
+
+  <div class="card">
+    <h2>Prerequisite</h2>
+    <ul>
+      <li>An active Google account</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <h3>Step 1: Access Google Cloud Console</h3>
+    <p>Click the button below to navigate to the Google Cloud Console.</p>
+    <a href="https://aistudio.google.com/app/apikey" target="_blank" class="btn">Go to Google Cloud Console</a>
+    <img src="step1.jpg" alt="Google Cloud Console homepage">
+  </div>
+
+  <div class="step">
+    <h3>Step 2: Create API key</h3>
+    <p>Click the center button to Create a new API key.</p>
+    <img src="step2.jpg" alt="Creating a new project in Google Cloud Console">
+  </div>
+
+  <div class="step">
+    <h3>Step 3: Create API key in a new project</h3>
+    <p>Press the button to create a API key in a new project.</p>
+    <img src="step3.jpg" alt="Enabling APIs in Google Cloud Console">
+  </div>
+
+  <div class="step">
+    <h3>Step 4: Copy the key to your clipboard</h3>
+    <p>Press the button to copy the key to your clipboard.</p>
+    <img src="step4.jpg" alt="Selecting an API in Google Cloud Console">
+  </div>
+
+  <div class="step">
+    <h3>Step 5: Open ClipChat settings</h3>
+    <p>In the top bar of your chrome browser press the puzzle icon to show your extension. Then click on the ClipChat name to open the extension's menu.</p>
+    <img src="step5.jpg" alt="Generating an API key in Google Cloud Console">
+  </div>
+
+  <div class="step">
+    <h3>Step 6: Paste and Save the API key</h3>
+    <p>Click on the input box and paste the text in your clipboard. On Mac: press Command + v, or Windows: Ctrl + v. Then press save to store the API key.</p>
+    <img src="step6.jpg" alt="Saving the API key in the extension">
+  </div>
+
+  <div class="card">
+    <h2>All done! 🎉</h2>
+    <p>Congratulations! The extension is now ready to use for any YouTube video.</p>
+    <img src="step7.jpg" alt="Success message for API key generation">
+    <p>Have fun!</p>
+  </div>
+</body>
+</html>
