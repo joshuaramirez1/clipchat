@@ -6,7 +6,7 @@ let thinking = false;
 let api_key = "";
 
 
-
+//first attempt to fetch a stored api key
 chrome.storage.sync.get('apiKey', function(data) {
     if (data.apiKey) {
         console.log(data.apiKey);
@@ -16,6 +16,7 @@ chrome.storage.sync.get('apiKey', function(data) {
     }
 });
 
+//function to get assistant response with a message
 async function getResponse(message) {
     console.log(transcript);
      chrome.storage.sync.get('apiKey', function(data) {
@@ -70,6 +71,7 @@ async function getResponse(message) {
 
         const data = await response.json();
         thinking = false;
+        //this probably was not neccessary.
         if (data) {
             finish_reason = data.candidates[0].finishReason;
             if (finish_reason == "SAFETY") {
@@ -496,6 +498,8 @@ function addSubCommentToList(author, message, parentIndex) {
         const subCommentElement = document.createElement('div');
         subCommentElement.className = 'comment sub-comment';
 
+        
+        //used ai for this parsing
         message = message.replace(/\[(\d+):(\d+)\]/g, (match, minutes, seconds) => {
             const totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
             const url = `https://www.youtube.com/watch?v=${getVideoId(window.location.href)}&t=${totalSeconds}`;
@@ -564,7 +568,7 @@ function addSubCommentToList(author, message, parentIndex) {
 }
 
 
-
+//adds a sub comment to the parent.
  function sendSubCommentReply(message, parentIndex) {
   const parentComment = document.querySelector(`.comment[data-index="${parentIndex}"]`);
   const subCommentsContainer = parentComment.querySelector('.sub-comments');
@@ -578,7 +582,7 @@ function addSubCommentToList(author, message, parentIndex) {
 
   addSubCommentToList('User', message, parentIndex);
 }
-
+//gets chat history for comment replies.
 function getChatHistory(subCommentsContainer, originalCommentAuthor, originalCommentText) {
   let history = `${originalCommentAuthor}: ${originalCommentText}\n`;
   const comments = subCommentsContainer.querySelectorAll('.sub-comment');
